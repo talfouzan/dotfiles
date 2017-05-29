@@ -1,0 +1,22 @@
+defaults
+tls on
+auto_from on
+logfile ~/.msmtp.log
+
+account gmail
+host smtp.gmail.com
+tls on
+tls_certcheck off
+auth on
+from MY_EMAIL@gmail.com
+user MY_EMAIL@gmail.com
+port 587
+
+account icloud
+host smtp.mail.me.com
+tls on
+tls_certcheck off
+auth on
+from talfouzan@me.com
+user talfouzan@me.com
+port 587

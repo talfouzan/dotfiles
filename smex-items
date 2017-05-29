@@ -1,0 +1,25 @@
+
+;; ----- smex-history -----
+(
+ mu4e
+ reload-settings
+ irc
+ settings
+ list-packages
+ check-parens
+ other-window
+)
+
+;; ----- smex-data -----
+(
+ (evil-digit-argument-or-evil-beginning-of-line . 2)
+ (dired-x-find-file . 3)
+ (list-packages . 2)
+ (evil-tutor-start . 1)
+ (other-window . 1)
+ (reload-settings . 9)
+ (check-parens . 6)
+ (settings . 1)
+ (irc . 2)
+ (mu4e . 2)
+)

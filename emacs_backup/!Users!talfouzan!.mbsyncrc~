@@ -1,0 +1,27 @@
+IMAPAccount icloud
+Host p04-imap.mail.me.com
+User talfouzan@me.com
+# UseIMAPS yes
+AuthMechs LOGIN
+SSLType IMAPS
+SSLVersions TLSv1
+PassCmd "security find-generic-password -s mbsync-icloud-password -w"
+
+IMAPStore icloud-remote
+Account icloud
+
+MaildirStore icloud-local
+Path ~/Mail/icloud/
+Inbox ~/Mail/icloud/inbox
+Trash trash
+
+Channel icloud-folders
+Master :icloud-remote:
+Slave :icloud-local:
+Patterns "INBOX" "Drafts" "Arch*" "Sent*" "Trash" "Junk" "Deleted*"
+Create Both
+Expunge Both
+SyncState *
+
+Group icloud
+Channel icloud-folders

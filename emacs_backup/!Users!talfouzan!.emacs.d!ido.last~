@@ -1,0 +1,42 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/" . "talfouzan/")
+ ("/Users/talfouzan/" . "Documents/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/talfouzan/Documents/"
+ "/Users/talfouzan/org/"
+ "/Users/talfouzan/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Bhoy.org"
+ "org-mode.el"
+ "blog-ideas.org"
+ "settings.org"
+ "init.el"
+ "Cask"
+ "configurationorig.org"
+ "configuration.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/talfouzan/Documents/" (22736 64051 0 0) "UFO/" "OpenXcom-master/" "OpenXcom/" "grrussel-openxcomosx-c80a97f411be/" "default.jpg" ".VisumantragEngl.pdf.icloud" ".To Citi Business account 29 April.pdf.icloud" ".Thunayan Al Fouzan Resume.pdf.icloud" ".Thunayan Al Fouzan Resume.pages.icloud" ".Sparkasse Wire transfer form-signed-signed.pdf.icloud" ".Org Mode - Organize Your Life In Plain Text!.pdf.icloud" ".MumbleAutomaticCertificateBackup.p12.icloud" ".localized" ".Goethe-Institut1 – Course date, fees, enrolment.pdf.icloud" ".Goethe-Institut – Course date, fees, enrolment.pdf.icloud" ".DS_Store" ".Allianz - Application Form Writable filled in copy 2.pdf.icloud" "../" "./")
+
+ ("/Users/talfouzan/.emacs.d/" (22798 13157 0 0) "snippets/" "smex-items" "settings.org" "settings.el" "server/" "sensible-defaults.el/" "resources/" "init.el" "ido.last" "emacs_backup/" "configurationorig.org~" "configurationorig.org" "configurationorig.el" "configuration.org~" "configuration.org" "configuration.el" "Cask" "bookmarks" "autosave/" "auto-save-list/" "abbrev_defs" ".tutor/" ".cask/" "../" "./")
+
+ ("/Users/" (22651 39568 0 0) "talfouzan/" "Shared/" "Guest/" ".localized" "../" "./")
+
+ ("/Users/talfouzan/org/" (22799 27292 0 0) "to-read.org" "til.org" "test-act4.txt" "test-act3.txt" "test-act2.txt" "test-act.txt" "org-mode.org" "org-mode.el" "index.org" "groceries.org" "blog-ideas.org" "archive.org" "../" "./")
+
+ ("/Users/talfouzan/" (22798 9109 0 0) "zshrcfile" "Scripts/" "Public/" "Projects/" "Pictures/" "org/" "openxcom/" "Music/" "Movies/" "maximum-awesome/" "local/" "Library/" "Dropbox/" "Downloads/" "dotfiles/" "Documents/" "Desktop/" "bin/" "Applications/" ".zshrc" ".zshenv" ".zprofile" ".zpreztorc" ".zprezto/" ".zlogout" ".zlogin" ".zhistory" ".zcompdump.zwc" ".zcompdump" ".Xauthority" ".wine/" ".vimrc.local" ".vimrc.bundles.local" ".vimrc.bundles" ".vimrc.bak" ".vimrc" ".viminfo" ".vim_runtime/" ".vim/" ".Trash/" ".tmux.conf.local" ".tmux.conf" ".ssh/" ".serverauth.8848" ".rnd" ".pyenv/" ".pgadmin/" ".local/" ".gnupg/" ".gitignore" ".gitconfig" ".emacs~" ".emacsold" ".emacs.d.old/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dia-etc/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

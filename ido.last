@@ -1,0 +1,71 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/talfouzan/.emacs.d/snippets/" . "message-mode/")
+ ("/Users/talfouzan/.emacs.d/" . "snippets/")
+ ("/Users/talfouzan/Scripts/" . "mac_os/")
+ ("/Users/talfouzan/Projects/Python/elpy/" . "bin/")
+ ("/Users/talfouzan/Projects/Python/" . "elpy/")
+ ("/Users/talfouzan/Projects/" . "config/")
+ ("/Users/" . "talfouzan/")
+ ("/Users/talfouzan/" . ".emacs.d/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/talfouzan/"
+ "/Users/talfouzan/.emacs.d/"
+ "/Users/talfouzan/Documents/"
+ "/Users/talfouzan/org/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".mbsyncrc"
+ "mbsync.el"
+ ".msmtp"
+ "Cask"
+ "Bhoy.org"
+ "org-mode.el"
+ "blog-ideas.org"
+ "settings.org"
+ "init.el"
+ "configurationorig.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/talfouzan/.emacs.d/snippets/message-mode/" (22810 10000 0 0) "../" "./")
+
+ ("/Users/talfouzan/.emacs.d/snippets/" (22810 10000 0 0) "text-mode/" "message-mode/" "../" "./")
+
+ ("/Users/talfouzan/" (22810 10010 0 0) "zshrcfile" "Scripts/" "Public/" "Projects/" "Pictures/" "org/" "openxcom/" "Music/" "Movies/" "maximum-awesome/" "Mail/" "local/" "Library/" "iCloud Drive (Archive)/" "Dropbox/" "Downloads/" "dotfiles/" "Documents/" "Desktop/" "bin/" "Applications/" ".zshrc" ".zshenv" ".zprofile" ".zpreztorc" ".zprezto/" ".zlogout" ".zlogin" ".zhistory" ".zcompdump.zwc" ".zcompdump" ".Xauthority" ".wine/" ".w3m/" ".vimrc.local" ".vimrc.bundles.local" ".vimrc.bundles" ".vimrc.bak" ".vimrc" ".viminfo" ".vim_runtime/" ".vim/" ".Trash/" ".tmux.conf.local" ".tmux.conf" ".ssh/" ".serverauth.8848" ".rnd" ".pyenv/" ".pgadmin/" ".mu/" ".msmtp" ".mbsyncrc" ".local/" ".gnupg/" ".gitignore" ".gitconfig" ".gem/" ".erc/" ".emacs~" ".emacsold" ".emacs.d.old/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dia-etc/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/talfouzan/.emacs.d/" (22808 60773 0 0) "snippets/" "smex-items" "settings.org" "settings.el" "server/" "sensible-defaults.el/" "resources/" "init.el" "ido.last" "emacs_backup/" "configurationorig.org~" "configurationorig.org" "configurationorig.el" "configuration.org~" "configuration.org" "configuration.el" "Cask" "bookmarks" "autosave/" "auto-save-list/" "abbrev_defs" ".tutor/" ".DS_Store" ".cask/" "../" "./")
+
+ ("/Users/talfouzan/Documents/" (22806 1153 0 0) ".localized" "../" "./")
+
+ ("/Users/talfouzan/Projects/config/" (22653 63158 0 0) "env.sh" "../" "./")
+
+ ("/Users/talfouzan/Scripts/mac_os/" (22652 61671 0 0) "README.md" "LICENSE.md" "lib/" "CONTRIBUTING.md" "CODE_OF_CONDUCT.md" "CHANGES.md" "bin/" ".github/" ".git/" "../" "./")
+
+ ("/Users/talfouzan/Scripts/" (22678 16828 0 0) "Resources/" "mac_os-config/" "mac_os/" ".DS_Store" "../" "./")
+
+ ("/Users/talfouzan/org/" (22802 20925 0 0) "to-read.org" "til.org" "test-act4.txt" "test-act3.txt" "test-act2.txt" "test-act.txt" "org-mode.org" "org-mode.el" "index.org" "groceries.org" "blog-ideas.org" "archive.org" "../" "./")
+
+ ("/Users/talfouzan/.erc/" (22800 54113 0 0) "logs/" ".erc-auth" "../" "./")
+
+ ("/Users/talfouzan/Projects/Python/elpy/bin/" (22800 50264 0 0) "wheel" "python2.7" "python2" "python-config" "python" "pip2.7" "pip2" "pip" "easy_install-2.7" "easy_install" "activate_this.py" "activate.fish" "activate.csh" "activate" "../" "./")
+
+ ("/Users/talfouzan/Projects/Python/elpy/" (22800 50264 0 0) "pip-selfcheck.json" "lib/" "include/" "bin/" "../" "./")
+
+ ("/Users/talfouzan/Projects/Python/" (22800 50251 0 0) "elpy/" "../" "./")
+
+ ("/Users/talfouzan/Projects/" (22800 50138 0 0) "Python/" "config/" "../" "./")
+
+ ("/Users/" (22651 39568 0 0) "talfouzan/" "Shared/" "Guest/" ".localized" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

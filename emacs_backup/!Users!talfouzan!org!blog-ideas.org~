@@ -1,0 +1,21 @@
+* Reading List
+
+** From Vim to Emacs in Fourteen Days
+[2017-05-06 Sat]
+
+[[https://blog.aaronbieber.com/2015/05/24/from-vim-to-emacs-in-fourteen-days.html][From Vim to Emacs in Fourteen Days]]
+
+Yes, my friends, it is true. After more than fifteen years using Vim, teaching Vim, proselytizing about Vim, all the while scoffing in the general direction of Emacs, I’ve seen the light. The light of Lisp… Or something.
+
+** Org Capture From Anywhere on Your Mac
+[2017-05-07 Sun]
+
+[[https://blog.aaronbieber.com/2016/11/24/org-capture-from-anywhere-on-your-mac.html][Org Capture From Anywhere on Your Mac]]
+
+Open some webpage of your choice, maybe select some text on the page, and hit this bookmarklet. Hopefully Emacs will come to the front with a capture window open, ready for you to tweak or edit the new entry and commit it to your notes!
+** New Emacs Wikemacs
+ [[w][http://wikemacs.org/wiki/Main_Page]]
+** Your life in org mode
+*** [[w][http://doc.norang.ca/org-mode.html]]
+** [[w][Emac work flow
+*** http://www.bundesbrandschatzamt.de/~baron/blog/20170216-500commits]]

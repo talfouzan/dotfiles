@@ -6,6 +6,8 @@ AuthMechs LOGIN
 SSLType IMAPS
 SSLVersions TLSv1
 PassCmd "security find-generic-password -s mbsync-icloud-password -w"
+PipelineDepth 1
+
 
 IMAPStore icloud-remote
 Account icloud
@@ -22,6 +24,7 @@ Patterns "INBOX" "Drafts" "Arch*" "Sent*" "Trash" "Junk" "Deleted*"
 Create Both
 Expunge Both
 SyncState *
+
 
 Group icloud
 Channel icloud-folders

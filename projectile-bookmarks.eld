@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/git/org/" "~/git/bbdb/" "~/git/org-mode/")

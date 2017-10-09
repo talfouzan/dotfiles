@@ -9,7 +9,7 @@
  ("/Users/talfouzan/Projects/Python/" . "elpy/")
  ("/Users/talfouzan/Projects/" . "config/")
  ("/Users/" . "talfouzan/")
- ("/Users/talfouzan/" . ".emacs.d/")
+ ("/Users/talfouzan/" . "Documents/")
 )
 
 ;; ----- ido-work-directory-list -----
@@ -36,23 +36,32 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/talfouzan/org/" (22900 43940 0 0) "darkestdungeon.org" "diary.org" "groceries.org" "funco.org" "todo.org" "org.org" "index.org" "../" "./")
+
+ ("/Users/talfouzan/Documents/" (22978 57851 0 0) "Goethe-Institut1 – Course date, fees, enrolment.pdf" "grrussel-openxcomosx-c80a97f411be/" "network2.txt" "default.jpg" "netstats" "Allianz - Application Form Writable filled in copy 2.pdf" "netstats2" "systems2.txt" "Sparkasse Wire transfer form-signed-signed.pdf" "Arizona Avenue Account/" "systems.txt" "To Citi Business account 29 April.pdf" "Goethe-Institut – Course date, fees, enrolment.pdf" "network.txt" "Funco10Feas.xlsx" "iplist2.txt" "VisumantragEngl.pdf" "OpenXcom-master/" "Thunayan Al Fouzan Resume.pdf" "OpenXcom/" "Documents - Thunayan’s iMac/" "P-touch Editor 5.0/" "UFO/" "Thunayan Al Fouzan Resume.pages" "Larian Studios/" "netstats1" ".localized" "iplist.txt" "Org Mode - Organize Your Life In Plain Text!.pdf" ".DS_Store" "MumbleAutomaticCertificateBackup.p12" "PlayLand Dwg.dwg" "../" "./")
+
+ ("/Users/talfouzan/.emacs.d/" (22994 31242 58069 584000) "settings.el" ".cache/" "#settings.el#" ".git/" "emacs_backup/" "elpa/" "Cask" "recentf" ".org-id-locations" ".cask/" "bookmarks" "configurationorig.el" "autosave/" "org-clock-save.el" "init.el" "auto-save-list/" "server/" "configuration.el" "resources/" "projectile-bookmarks.eld" "configuration.org" "ido.last~" "settingsworking.org" "config" "configuration.org~" "abbrev_defs" "smex-items" ".DS_Store" "configurationorig.org~" "configurationorig.org" "settings.bak" "settings.org" "ido.last" "sensible-defaults.el/" "snippets/" "bbdb" "../" "./")
+
+ ("/Users/talfouzan/" (22994 31005 186234 918000) ".zlogout" ".zlogin" "git/" ".viminfo" ".emacs.d.pre-prelude.tar" ".bash_history" ".gitconfig" ".zcompdump.zwc" "Downloads/" ".gem/" ".bash_profile" ".spacemacs" "Documents/" "My Games/" ".zprezto/" ".zcompdump" ".Trash/" "Dropbox/" ".ScanSnap/" ".profile" "Applications/" "Movies/" ".ssh/" "iCloud Drive (Archive) - 2/" ".zshenv" ".msf4/" ".dropbox/" "Public/" ".iterm2/" ".bash_sessions/" ".cups/" ".gitignore_global" ".android/" ".emacs.d/" "iCloud Drive (Archive)/" ".mbsyncrc" ".oracle_jre_usage/" ".mkshrc" "Library/" ".zhistory" "Desktop/" ".iterm2_shell_integration.zsh" ".rvm/" ".bundle/" ".zprofile" "Pictures/" ".local/" "Mail/" "org/" ".zshrc" ".mu/" ".bashrc" ".subversion/" ".rbenv/" "bin/" "ABBYY/" ".wget-hsts" "test" ".w3m/" ".CFUserTextEncoding" ".gnupg/" ".DS_Store" "iCloud Drive (Archive) - 1/" ".kodi/" "Music/" ".config/" ".zpreztorc" "../" "./")
+
+ ("/Users/talfouzan/git/org/" (22994 48420 249191 640000) "darkestdungeon.org" ".git/" "diary.org" ".gitignore" "refile.org" "groceries.org" "funco.org" "todo.org" "org.org" ".DS_Store" "../" "./")
+
+ ("/Users/talfouzan/.emacs.d/autosave/" (22994 41220 213421 444000) "342-Thunayans-iMac.home~" "424-Thunayans-iMac.local~" "385-Thunayans-iMac.home~" "#!Users!talfouzan!Documents!Bhoy.org#" "../" "./")
+
+ ("/Users/talfouzan/.config/" (22827 3430 0 0) "menus/" "htop/" ".mono/" "../" "./")
+
+ ("/Users/talfouzan/Dropbox/" (22838 56303 0 0) "صورة copy.jpg" "Wounds/" "Web/" "Visa Photos/" "unprocessed reciepts/" "Uk property/" "Tuna DJ mix1 - 7-5-16.aif" "tomyell.wav" "To Citi Business account 26 May copy.pdf" "Thunayan new civid.pdf" "Thunayan Med/" "This is your Dropbox.txt" "TextExpander/" "test-act4.txt" "test-act3.txt" "test-act2.txt" "test-act.txt" "Synced Pics/" "Summary_of_Terms_Al_Ghanim.pdf" "Software/" "Sites/" "Signatures/" "Shopping/" "Shared/" "Script/" "Screenshots/" "ScannerPro/" "Scanner/" "Scan May 25, 2015, 5_41 PM.pdf" "Public/" "POA/" "Pictures/" "Photos/" "Passport Photos/" "org-mode.el" "Org/" "omnifocus/" "omar al essa/" "Notes/" "Music/" "Movies/" "Moms Sibly Medical Report Sept 2016.pdf" "Moms Sibly ER medical report Sept 2016.pdf" "Moms Mayo clinic medical records.pdf" "Mom's Kuwait Property/" "Mickey Petersen-Mastering Emacs (2015).pdf" "Medical/" "Library/" "iPhone intro.pdf" "iPad intro.pdf" "iOS-Installer_Popcorn-Time-1.14.pkg" "iOS Photos/" "IFTTT/" "Icon
+" "HotSpot/" "Honda Van/" "Healthofficedeclaration.pdf" "Groups/" "Funco/" "ffchampsoverall.xls" "ffchamps.xls" "FAX_20170216_1487251316_731.pdf" "Email Archives Database Mailsteward/" "Documents/" "Dnc guccifer leaks/" "Devonthink Database/" "Destiny PS4/" "Desktoppr/" "Dennis/" "Dc Property/" "Camera Uploads/" "Bank Accounts/" "Backup/" "Arizona Ramp Estimate without electrical.pdf" "Archived Mail/" "Archive/" "Apps/" "Apex Fund Docs/" "Alfred Sync/" "Alfred/" "Al Qabas.pdf" "Agenda/" "Abdullahscartitle.jpeg" "Abdullah's medical supplies/" "Abdullah new paassport.pdf" "Abdullah Medical Reports/" "Abdullah land germany/" "Abdullah Alfowzan Travel policy.pdf" "Abdulatif Mobile Photo Backups/" "AAA - The Startup Song.m4a" "246-248.dwg" "2017-06-02-14-12-19.txt" "1passwordMaster/" "1Password.agilekeychain/" ".ws.agile.1Password.settings" ".DS_Store" ".dropbox.cache/" ".dropbox" ".#org-mode.org" "../" "./")
+
  ("/Users/talfouzan/.emacs.d/snippets/message-mode/" (22810 10000 0 0) "../" "./")
 
  ("/Users/talfouzan/.emacs.d/snippets/" (22810 10000 0 0) "text-mode/" "message-mode/" "../" "./")
-
- ("/Users/talfouzan/" (22810 10010 0 0) "zshrcfile" "Scripts/" "Public/" "Projects/" "Pictures/" "org/" "openxcom/" "Music/" "Movies/" "maximum-awesome/" "Mail/" "local/" "Library/" "iCloud Drive (Archive)/" "Dropbox/" "Downloads/" "dotfiles/" "Documents/" "Desktop/" "bin/" "Applications/" ".zshrc" ".zshenv" ".zprofile" ".zpreztorc" ".zprezto/" ".zlogout" ".zlogin" ".zhistory" ".zcompdump.zwc" ".zcompdump" ".Xauthority" ".wine/" ".w3m/" ".vimrc.local" ".vimrc.bundles.local" ".vimrc.bundles" ".vimrc.bak" ".vimrc" ".viminfo" ".vim_runtime/" ".vim/" ".Trash/" ".tmux.conf.local" ".tmux.conf" ".ssh/" ".serverauth.8848" ".rnd" ".pyenv/" ".pgadmin/" ".mu/" ".msmtp" ".mbsyncrc" ".local/" ".gnupg/" ".gitignore" ".gitconfig" ".gem/" ".erc/" ".emacs~" ".emacsold" ".emacs.d.old/" ".emacs.d/" ".DS_Store" ".dropbox/" ".dia-etc/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_profile" ".bash_history" "../" "./")
-
- ("/Users/talfouzan/.emacs.d/" (22808 60773 0 0) "snippets/" "smex-items" "settings.org" "settings.el" "server/" "sensible-defaults.el/" "resources/" "init.el" "ido.last" "emacs_backup/" "configurationorig.org~" "configurationorig.org" "configurationorig.el" "configuration.org~" "configuration.org" "configuration.el" "Cask" "bookmarks" "autosave/" "auto-save-list/" "abbrev_defs" ".tutor/" ".DS_Store" ".cask/" "../" "./")
-
- ("/Users/talfouzan/Documents/" (22806 1153 0 0) ".localized" "../" "./")
 
  ("/Users/talfouzan/Projects/config/" (22653 63158 0 0) "env.sh" "../" "./")
 
  ("/Users/talfouzan/Scripts/mac_os/" (22652 61671 0 0) "README.md" "LICENSE.md" "lib/" "CONTRIBUTING.md" "CODE_OF_CONDUCT.md" "CHANGES.md" "bin/" ".github/" ".git/" "../" "./")
 
  ("/Users/talfouzan/Scripts/" (22678 16828 0 0) "Resources/" "mac_os-config/" "mac_os/" ".DS_Store" "../" "./")
-
- ("/Users/talfouzan/org/" (22802 20925 0 0) "to-read.org" "til.org" "test-act4.txt" "test-act3.txt" "test-act2.txt" "test-act.txt" "org-mode.org" "org-mode.el" "index.org" "groceries.org" "blog-ideas.org" "archive.org" "../" "./")
 
  ("/Users/talfouzan/.erc/" (22800 54113 0 0) "logs/" ".erc-auth" "../" "./")
 

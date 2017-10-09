@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- mu4e
- reload-settings
- irc
+ icalendar-export-file
+ recover-session
+ recover-file
  settings
- list-packages
- check-parens
- other-window
+ customize-themes
+ make-directory
+ find-file
 )
 
 ;; ----- smex-data -----
@@ -17,9 +17,20 @@
  (list-packages . 2)
  (evil-tutor-start . 1)
  (other-window . 1)
- (reload-settings . 9)
+ (reload-settings . 12)
  (check-parens . 6)
- (settings . 1)
+ (settings . 6)
  (irc . 2)
- (mu4e . 2)
+ (mu4e . 5)
+ (mu4e-update-mail-and-index . 1)
+ (eval-current-buffer . 1)
+ (eval-buffer . 3)
+ (eval-expression . 1)
+ (recover-this-file . 1)
+ (recover-session . 4)
+ (find-file . 1)
+ (make-directory . 2)
+ (customize-themes . 1)
+ (recover-file . 2)
+ (icalendar-export-file . 1)
 )

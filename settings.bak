@@ -1,0 +1,284 @@
+* Using Git for Automatic History, Backups, and Synchronization
+:PROPERTIES:
+:CUSTOM_ID: GitSync
+:END:
+
+Editing folded regions of your org-mode file can be hazardous to your
+data.  My method for dealing with this is to put my org files in a
+=Git= source repository.
+
+My setup saves all of my org-files every hour and creates a commit
+with my changes automatically.  This lets me go back in time and view
+the state of my org files for any given hour over the lifetime of the
+document.  I've used this once or twice to recover data I accidentally
+removed while editing folded regions.
+** Automatic Hourly Commits
+:PROPERTIES:
+:CUSTOM_ID: HourlyCommits
+:END:
+
+My Emacs setup saves all org buffers at 1 minute before the hour using
+the following code in my =.emacs=
+
+#+header: :tangle yes
+#+begin_src emacs-lisp
+(run-at-time "00:59" 3600 'org-save-all-org-buffers)
+#+end_src
+
+A =cron= job runs at the top of the hour to commit any changes just
+saved by the call to =org-save-all-org-buffers= above.  I use a script
+to create the commits so that I can run it on demand to easily commit
+all modified work when moving from one machine to another.
+
+=crontab= details:
+#+begin_example
+0 * * * * ~/bin/org-git-sync.sh >/dev/null
+#+end_example
+*** ~/bin/org-git-sync.sh
+:PROPERTIES:
+:CUSTOM_ID: OrgGitSyncSh
+:END:
+
+Here is the shell script I use to create a =git= commit for each of my
+org-repositories.  This loops through multiple repositories and
+commits any modified files.  I have the following org-mode
+repositories:
+
+- org
+
+  for all of my organization project files and todo lists
+
+- doc-norang.ca
+
+  for any changes to documents under http://doc.norang.ca/
+
+- www.norang.ca
+
+  for any changes to my other website http://www.norang.ca/
+
+This script does not create empty commits - =git= only creates a commit
+if something was modified.
+#+begin_src sh
+#!/bin/sh
+# Add org file changes to the repository
+REPOS="org"
+
+for REPO in $REPOS
+do
+    echo "Repository: $REPO"
+    cd ~/git/$REPO
+    # Remove deleted files
+    git ls-files --deleted -z | xargs -0 git rm >/dev/null 2>&1
+    # Add new files
+    git add . >/dev/null 2>&1
+    git commit -m "$(date)"
+done
+#+end_src
+
+I use the following =.gitignore= file in my org-mode =git=
+repositories to keep export generated files out of my =git=
+repositories.  If I include a graphic from some other source than
+ditaa or graphviz then I'll add it to the repository manually.  By
+default all PNG graphic files are ignored (since I assume they are
+produced by ditaa during export)
+#+begin_example
+core
+core.*
+,*.html
+,*~
+.#*
+\#*\#
+,*.txt
+,*.tex
+,*.aux
+,*.dvi
+,*.log
+,*.out
+,*.ics
+,*.pdf
+,*.xml
+,*.org-source
+*.png
+*.toc
+#+end_example
+** Git - Edit files with confidence
+:PROPERTIES:
+:CUSTOM_ID: GitEditWithConfidence
+:END:
+
+I use =git= in all of my directories where editing a file should be
+tracked.
+
+This means I can edit files with confidence.  I'm free to change stuff
+and break things because it won't matter.  It's easy to go back to a
+previous working version or to see exactly what changed since the last
+commit.  This is great when editing configuration files (such as
+apache webserver, bind9 DNS configurations, etc.)
+
+I find this extremely useful where your edits might break things and
+having =git= tracking the changes means if you break it you can just
+go back to the previous working version easily.  This is also true for
+package upgrades for software where the upgrade modifies the
+configuration files.
+
+I have every version of my edits in a local =git= repository.
+** Git Repository synchronization
+:PROPERTIES:
+:CUSTOM_ID: git-sync
+:END:
+
+I acquired a Eee PC 1000 HE which now serves as my main road-warrior
+laptop replacing my 6 year old Toshiba Tecra S1.
+
+I have a server on my LAN that hosts bare git repositories for all of
+my projects.  The problem I was facing is I have to leave in 5 minutes
+and want to make sure I have up-to-date copies of everything I work on
+when I take it on the road (without Internet access).
+
+To solve this I use a server with bare git repositories on it.  This
+includes my org-mode repositories as well as any other git
+repositories I'm interested in.
+
+Just before I leave I run the =git-sync= script on my workstation to
+update the bare git repositories and then I run it again on my Eee PC
+to update all my local repositories on the laptop.  For any
+repositories that give errors due to non-fast-forward merges I
+manually merge as required and rerun =git-sync= until it reports no
+errors.  This normally takes a minute or two to do.  Then I grab my
+Eee PC and leave.  When I'm on the road I have full up-to-date history
+of all my git repositories.
+
+The =git-sync= script replaces my previous scripts with an all-in-one
+tool that basically does this:
+
+- for each repository on the current system
+  - fetch objects from the remote
+  - for each branch that tracks a remote branch
+    - Check if the ref can be moved
+      - fast-forwards if behind the remote repository and is fast-forwardable
+      - Does nothing if ref is up to date
+      - Pushes ref to remote repository if ref is ahead of remote repository and fast-forwardable
+      - Fails if ref and remote have diverged
+
+This automatically advances changes on my 35+ git repositories with
+minimal manual intervention.  The only time I need to manually do
+something in a repository is when I make changes on my Eee PC and my
+workstation at the same time - so that a merge is required.
+
+Here is the =git-sync= script
+
+#+begin_src sh
+#!/bin/sh
+#
+
+# Local bare repository name
+syncrepo=org
+reporoot=~/git
+
+# Display repository name only once
+log_repo() {
+  [ "x$lastrepo" == "x$repo" ] || {
+    printf "\nREPO: ${repo}\n"
+    lastrepo="$repo"
+  }
+}
+
+# Log a message for a repository
+log_msg() {
+  log_repo
+  printf "  $1\n"
+}
+
+# fast-forward reference $1 to $syncrepo/$1
+fast_forward_ref() {
+  log_msg "fast-forwarding ref $1"
+  current_ref=$(cat .git/HEAD)
+  if [ "x$current_ref" = "xref: refs/heads/$1" ]
+  then
+    # Check for dirty index
+    files=$(git diff-index --name-only HEAD --)
+    git merge refs/remotes/$syncrepo/$1
+  else
+    git branch -f $1 refs/remotes/$syncrepo/$1
+  fi
+}
+
+# Push reference $1 to $syncrepo
+push_ref() {
+  log_msg "Pushing ref $1"
+  if ! git push --tags $syncrepo $1
+  then
+    exit 1
+  fi
+}
+
+# Check if a ref can be moved
+#   - fast-forwards if behind the sync repo and is fast-forwardable
+#   - Does nothing if ref is up to date
+#   - Pushes ref to $syncrepo if ref is ahead of syncrepo and fastforwardable
+#   - Fails if ref and $syncrop/ref have diverged
+check_ref() {
+  revlist1=$(git rev-list refs/remotes/$syncrepo/$1..$1)
+  revlist2=$(git rev-list $1..refs/remotes/$syncrepo/$1)
+  if [ "x$revlist1" = "x" -a "x$revlist2" = "x" ]
+  then
+    # Ref $1 is up to date.
+    :
+  elif [ "x$revlist1" = "x" ]
+  then
+    # Ref $1 is behind $syncrepo/$1 and can be fast-forwarded.
+    fast_forward_ref $1 || exit 1
+  elif [ "x$revlist2" = "x" ]
+  then
+    # Ref $1 is ahead of $syncrepo/$1 and can be pushed.
+    push_ref $1 || exit 1
+  else
+    log_msg "Ref $1 and $syncrepo/$1 have diverged."
+    exit 1
+  fi
+}
+
+# Check all local refs with matching refs in the $syncrepo
+check_refs () {
+  git for-each-ref refs/heads/* | while read sha1 commit ref
+  do
+    ref=${ref/refs\/heads\//}
+    git for-each-ref refs/remotes/$syncrepo/$ref | while read sha2 commit ref2
+    do
+      if [ "x$sha2" != "x" -a "x$sha2" != "x" ]
+      then
+        check_ref $ref || exit 1
+      fi
+    done
+  done
+}
+
+# For all repositories under $reporoot
+#   Check all refs matching $syncrepo and fast-forward, or push as necessary
+#   to synchronize the ref with $syncrepo
+#   Bail out if ref is not fastforwardable so user can fix and rerun
+time {
+  retval=0
+  if find $reporoot -type d -name '*.git' | {
+      while read repo
+      do
+        repo=${repo/\/.git/}
+        cd ${repo}
+        upd=$(git remote update $syncrepo 2>&1 || retval=1)
+        [ "x$upd" = "xFetching $syncrepo" ] || {
+          log_repo
+          printf "$upd\n"
+        }
+        check_refs || retval=1
+      done
+      exit $retval
+    }
+  then
+    printf "\nAll done.\n"
+  else
+    printf "\nFix and redo.\n"
+  fi
+}
+
+exit $retval
+#+end_src

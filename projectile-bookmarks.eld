@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/git/org/" "~/git/bbdb/" "~/git/org-mode/")
+("~/git/org/" "~/.emacs.d/" "~/git/bbdb/" "~/git/org-mode/")
